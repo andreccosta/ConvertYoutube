@@ -1,0 +1,9 @@
+<h2>New Task</h2>
+
+<%= form_for :task, url: tasks_path do |f| %>
+	<%= f.text_field :url , size: 35 %>
+<% end %>
+
+<% @tasks.each do |task| %>
+	<%= task.url %>
+<% end %>
