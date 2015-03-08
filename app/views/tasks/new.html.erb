@@ -1,9 +1,14 @@
-<h2>New Task</h2>
+<% if flash[:alert] %>
+	<div class="alert"><%= flash[:alert] %></div>
+<% end %>
 
 <%= form_for :task, url: tasks_path do |f| %>
-	<%= f.text_field :url , size: 35 %>
+	<%= f.text_field :url %>
+	<%= f.submit 'Convert', :class => 'submit_button' %>
 <% end %>
 
 <% @tasks.each do |task| %>
-	<%= task.url %>
+	<p><%= task.url %> / <%= task.done %> / <td><%= link_to 'Remove', task_path(task),
+              method: :delete,
+              data: { confirm: 'Are you sure you want to cancel this Task?' } %></td></p>
 <% end %>
