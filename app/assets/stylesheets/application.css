@@ -54,6 +54,10 @@ h3 {
 
 }
 
+p {
+	margin: 20px 0;
+}
+
 #wrapper {
 	width: 100%;
 	padding: 20px;

@@ -11,13 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150308131532) do
+ActiveRecord::Schema.define(version: 20150308224840) do
 
   create_table "tasks", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "url"
-    t.boolean  "done",       default: false
+    t.boolean  "done",         default: false
+    t.string   "stream_uri"
+    t.string   "download_url"
+    t.string   "title"
   end
 
 end
