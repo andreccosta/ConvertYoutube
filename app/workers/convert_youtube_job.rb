@@ -43,10 +43,10 @@ class ConvertYoutubeJob
   		puts("Writting id3tags");
 		Id3Tags.write_tags_to("#{Rails.root}/tmp/#{file_name}", tags)
 		
-		#Deleting unecessary files
+		#Deleting unecessary files # DANGEROUS
 		puts("Removing unnecessary files")
-		system("rm -rf '#{original_file_name}'")
-		system("rm -rf '#{cover_art_name}'")
+		File.delete("tmp/#{original_file_name}")
+		File.delete("tmp/#{cover_art_name}")
 
 		puts("Updating attributes")
   		task.update_attribute(:download_url, file_name)
