@@ -2,7 +2,6 @@ require 'zip'
 
 class TasksController < ApplicationController
 	def new
-		@task = Task.new
 		@tasks = Task.all
 	end
 
@@ -19,6 +18,11 @@ class TasksController < ApplicationController
 
 	def destroy
 		@task = Task.find(params[:id])
+		path = "#{Rails.root}/tmp/#{@task.download_url}"
+		logger.debug path
+		if @task.download_url != nil && File.exist?(path)
+			File.delete(path)
+		end
 		@task.destroy
 
 		redirect_to new_task_path

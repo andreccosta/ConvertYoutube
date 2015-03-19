@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
-  root 'tasks#new'
-
   resources :tasks do
     get :download, on: :member
   end
+
+  get '/' => 'tasks#new'
+  root 'tasks#new'
+
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

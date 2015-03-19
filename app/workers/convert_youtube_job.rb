@@ -51,5 +51,8 @@ class ConvertYoutubeJob
 		puts("Updating attributes")
   		task.update_attribute(:download_url, file_name)
 		task.update_attribute(:done, true)
+	rescue 
+		task.update_attribute(:failed, true)
+		task.update_attribute(:done, true)
 	end
 end

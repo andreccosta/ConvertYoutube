@@ -39,7 +39,10 @@ a:hover {
 a.button {
 	color: white;
 	padding: 6px 12px;
+	margin-left: 10px;
 	background-color: red;
+	box-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+	text-shadow: 0px 0px 5px rgba(0,0,0,0.4);
 }
 
 h1 {
@@ -58,6 +61,11 @@ p {
 	margin: 20px 0;
 }
 
+span.status {
+	margin-left: 10px;
+	font-weight: bold;
+}
+
 #wrapper {
 	width: 100%;
 	padding: 20px;
@@ -66,8 +74,8 @@ p {
 
 input {
 	outline: none;
-	box-shadow: 2px 2px 5px rgba(0,0,0,0.6);
-	text-shadow: 0px 0px 5px rgba(0,0,0,0.6);
+	box-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+	text-shadow: 0px 0px 5px rgba(0,0,0,0.4);
 }
 
 input#task_url {
@@ -104,6 +112,6 @@ input[type="submit"]:hover {
 	width: 500px;
 	padding: 10px 20px;
 	background-color: #e74c3c;
-	box-shadow: 2px 2px 5px rgba(0,0,0,0.6);
-	text-shadow: 0px 0px 5px rgba(0,0,0,0.6);
+	box-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+	text-shadow: 0px 0px 5px rgba(0,0,0,0.4);
 }
